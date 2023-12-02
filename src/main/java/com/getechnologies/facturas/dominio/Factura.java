@@ -3,6 +3,7 @@ package com.getechnologies.facturas.dominio;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 @Entity
@@ -13,7 +14,7 @@ public class Factura {
     private long id;
 
     @Column(name = "fecha")
-    private LocalDate fecha;
+    private LocalDateTime fecha;
 
     @Column(name = "monto")
     private Double monto;
@@ -22,11 +23,11 @@ public class Factura {
         return id;
     }
 
-    public LocalDate getFecha() {
+    public LocalDateTime getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
+    public void setFecha(LocalDateTime fecha) {
         this.fecha = fecha;
     }
 

@@ -15,8 +15,11 @@ public class FacturasRestService {
     @GetMapping("/facturas/persona/{personaId}")
     public List<Factura> findFacturasByPersona(@PathVariable Long personaId){
         return facturaService.findFacturasByPersona(personaId);
+    }
 
-
+    @PostMapping("/factura/persona/{personaId}")
+    public Factura saveFactura(@PathVariable Long personaId, @RequestBody double monto){
+      return facturaService.storeFactura(monto,personaId);
     }
 
 }
