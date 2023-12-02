@@ -64,4 +64,12 @@ public class Persona {
     public void setIdentificacion(String identificacion) {
         this.identificacion = identificacion;
     }
+
+    public List<Factura> getFacturas() {
+        return facturas;
+    }
+
+    public void setFacturas(List<Factura> facturas) {
+        this.facturas = facturas;
+    }
 }
