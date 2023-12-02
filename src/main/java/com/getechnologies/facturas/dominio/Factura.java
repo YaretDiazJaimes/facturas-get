@@ -20,7 +20,7 @@ public class Factura {
     @Column(name = "monto")
     private Double monto;
 
-    @ManyToOne()
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_persona")
     @JsonIgnore
     private Persona persona;
