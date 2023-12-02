@@ -25,8 +25,7 @@ public class Persona {
     @Column(name = "identificacion")
     private String identificacion;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_persona")
+    @OneToMany(mappedBy = "persona", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Factura> facturas;
 
     public long getId() {
