@@ -3,7 +3,7 @@ package com.getechnologies.facturas.restservice;
 import com.getechnologies.facturas.dominio.Factura;
 import com.getechnologies.facturas.dominio.Persona;
 import com.getechnologies.facturas.service.DirectorioService;
-import com.getechnologies.facturas.service.FacturaService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +19,9 @@ public class DirectorioRestService {
     @GetMapping("/directorio/persona/{identificacion}")
     public Persona findPersonaByIdentificacion(@PathVariable String identificacion){
         return directorioService.findPersonaByIdentificacion(identificacion);
+    }@GetMapping("/directorio/personas")
+    public List<Persona> getAllPersonas() {
+        return directorioService.getAllPersonas();
     }
 
 }
