@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 
 
 @Entity
+
 @Table(name = "facturas")
 public class Factura {
     @Id
@@ -24,7 +25,6 @@ public class Factura {
     @JoinColumn(name = "id_persona")
     @JsonIgnore
     private Persona persona;
-
     public long getId() {
         return id;
     }
