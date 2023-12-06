@@ -29,5 +29,10 @@ public class DirectorioRestService {
         directorioService.deletePersonaByIdentificacion(identificacion);
         return ResponseEntity.ok("Persona y facturas eliminadas correctamente");
     }
+    @PostMapping("/directorio/persona")
+    public ResponseEntity<String> storePersona(@RequestBody Persona persona){
+        directorioService.storePersona(persona);
+        return ResponseEntity.ok("Persona creada correctamente");
+    }
 
 }

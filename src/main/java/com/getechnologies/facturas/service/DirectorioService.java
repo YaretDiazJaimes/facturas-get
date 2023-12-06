@@ -1,6 +1,5 @@
 package com.getechnologies.facturas.service;
 
-import com.getechnologies.facturas.dominio.Factura;
 import com.getechnologies.facturas.dominio.Persona;
 import com.getechnologies.facturas.repository.FacturaRepository;
 import com.getechnologies.facturas.repository.PersonaRepository;
@@ -33,4 +32,9 @@ public class DirectorioService {
     public List<Persona> getAllPersonas() {
         return personaRepository.findAll();
     }
+    @Transactional
+    public void storePersona(Persona persona){
+        personaRepository.save(persona);
+    }
+
 }
